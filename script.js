@@ -185,3 +185,5 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('🚀 TechGear Product Gallery initialized successfully!');
   console.log('💡 Tip: Press Ctrl+C to toggle cart');
 });
+
+import { SpeedInsights } from "@vercel/speed-insights/next"

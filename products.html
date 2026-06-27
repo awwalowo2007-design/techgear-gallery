@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechGear - Products</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">TechGear</a>
+      <button class="hamburger-menu" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon">🌙</span>
+        <span class="toggle-text">Dark</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Premium Tech Collection</h1>
+      <p>Discover our handpicked selection of cutting-edge technology products</p>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="filters">
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All Products</button>
+      <button class="filter-btn" data-filter="audio">Audio</button>
+      <button class="filter-btn" data-filter="wearable">Wearables</button>
+      <button class="filter-btn" data-filter="smart-home">Smart Home</button>
+    </div>
+  </section>
+
+  <!-- Product Gallery -->
+  <main class="product-gallery">
+    <div class="gallery-container" id="galleryContainer">
+      <!-- Product Card 1 - Wireless Headphones -->
+      <div class="product-card" data-category="audio">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&fit=crop&crop=center" 
+               alt="Wireless Headphones" 
+               class="product-img"
+               loading="lazy">
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-details">
+          <span class="product-category">Audio</span>
+          <h3 class="product-title">Pro Wireless Headphones</h3>
+          <p class="product-description">Immersive sound with active noise cancellation and 30-hour battery life</p>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(128 reviews)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$249.99</span>
+            <span class="product-original-price">$299.99</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn-add-cart" onclick="addToCart('Pro Wireless Headphones', 249.99)">
+              <span class="btn-icon">🛒</span> Add to Cart
+            </button>
+            <button class="btn-wishlist" onclick="toggleWishlist(this)" aria-label="Add to wishlist">
+              ♡
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 2 - Smart Watch -->
+      <div class="product-card" data-category="wearable">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop&crop=center" 
+               alt="Smart Watch" 
+               class="product-img"
+               loading="lazy">
+          <span class="product-badge sale">Sale</span>
+        </div>
+        <div class="product-details">
+          <span class="product-category">Wearable</span>
+          <h3 class="product-title">Smart Watch Pro</h3>
+          <p class="product-description">Advanced health tracking with GPS, heart rate monitor, and sleep analysis</p>
+          <div class="product-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-count">(95 reviews)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$199.99</span>
+            <span class="product-original-price">$349.99</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn-add-cart" onclick="addToCart('Smart Watch Pro', 199.99)">
+              <span class="btn-icon">🛒</span> Add to Cart
+            </button>
+            <button class="btn-wishlist" onclick="toggleWishlist(this)" aria-label="Add to wishlist">
+              ♡
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 3 - Bluetooth Speaker -->
+      <div class="product-card" data-category="audio">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&h=400&fit=crop&crop=center" 
+               alt="Bluetooth Speaker" 
+               class="product-img"
+               loading="lazy">
+        </div>
+        <div class="product-details">
+          <span class="product-category">Audio</span>
+          <h3 class="product-title">Portable Bluetooth Speaker</h3>
+          <p class="product-description">360° surround sound, waterproof design, and 20-hour playtime</p>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(203 reviews)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$129.99</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn-add-cart" onclick="addToCart('Portable Bluetooth Speaker', 129.99)">
+              <span class="btn-icon">🛒</span> Add to Cart
+            </button>
+            <button class="btn-wishlist" onclick="toggleWishlist(this)" aria-label="Add to wishlist">
+              ♡
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 4 - Fitness Tracker -->
+      <div class="product-card" data-category="wearable">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&h=400&fit=crop&crop=center" 
+               alt="Fitness Tracker" 
+               class="product-img"
+               loading="lazy">
+          <span class="product-badge">Hot</span>
+        </div>
+        <div class="product-details">
+          <span class="product-category">Wearable</span>
+          <h3 class="product-title">Fitness Tracker Band</h3>
+          <p class="product-description">Lightweight design with step counting, calories, and notifications</p>
+          <div class="product-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-count">(156 reviews)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$79.99</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn-add-cart" onclick="addToCart('Fitness Tracker Band', 79.99)">
+              <span class="btn-icon">🛒</span> Add to Cart
+            </button>
+            <button class="btn-wishlist" onclick="toggleWishlist(this)" aria-label="Add to wishlist">
+              ♡
+            </button>
+          </div>
+        </div>
+      </div>
+
+   <!-- Product Card 5 - Smart LED Light Bulbs -->
+   <div class="product-card" data-category="smart-home">
+    <div class="product-image">
+      <img src="https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+           alt="Smart LED Light Bulbs with WiFi and RGB colors" 
+           class="product-img"
+           loading="lazy"
+           onerror="this.src='https://images.unsplash.com/photo-1565814636199-ae8133055c1c?w=600&h=400&fit=crop&crop=center'">
+    </div>
+    <div class="product-details">
+      <span class="product-category">Smart Home</span>
+      <h3 class="product-title">Smart LED Light Bulbs</h3>
+      <p class="product-description">WiFi-enabled RGB bulbs with voice control and scheduling</p>
+      <div class="product-rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-count">(312 reviews)</span>
+      </div>
+      <div class="product-price-row">
+        <span class="product-price">$49.99</span>
+        <span class="product-original-price">$69.99</span>
+      </div>
+      <div class="product-actions">
+        <button class="btn-add-cart" onclick="addToCart('Smart LED Light Bulbs', 49.99)">
+          <span class="btn-icon">🛒</span> Add to Cart
+        </button>
+        <button class="btn-wishlist" onclick="toggleWishlist(this)" aria-label="Add to wishlist">
+          ♡
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+      <!-- Product Card 6 - Smart Home Hub -->
+      <div class="product-card" data-category="smart-home">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=600&h=400&fit=crop&crop=center" 
+               alt="Smart Home Hub" 
+               class="product-img"
+               loading="lazy">
+          <span class="product-badge sale">-20%</span>
+        </div>
+        <div class="product-details">
+          <span class="product-category">Smart Home</span>
+          <h3 class="product-title">Smart Home Hub</h3>
+          <p class="product-description">Central control for all your smart devices with voice assistant</p>
+          <div class="product-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-count">(89 reviews)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">$159.99</span>
+            <span class="product-original-price">$199.99</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn-add-cart" onclick="addToCart('Smart Home Hub', 159.99)">
+              <span class="btn-icon">🛒</span> Add to Cart
+            </button>
+            <button class="btn-wishlist" onclick="toggleWishlist(this)" aria-label="Add to wishlist">
+              ♡
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shopping Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Shopping Cart</h2>
+        <button class="modal-close" onclick="toggleCart()">&times;</button>
+      </div>
+      <div class="modal-body" id="cartItems">
+        <p class="empty-cart">Your cart is empty</p>
+      </div>
+      <div class="modal-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+        <button class="btn-checkout" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Icon -->
+  <button class="cart-float" onclick="toggleCart()" aria-label="View cart">
+    🛒
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4>TechGear</h4>
+          <p>Your premium destination for cutting-edge technology products.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>📧 awwalowo2007@gmail.com</p>
+          <p>📞 +234 707 070 4322</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TechGear. All rights reserved.</p>
+        <p>Designed by SPYCROSOFT</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

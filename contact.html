@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - TechGear</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">TechGear</a>
+      <button class="hamburger-menu" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon">🌙</span>
+        <span class="toggle-text">Dark</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="contact-page">
+    <section class="contact-hero">
+      <h1>Get In Touch</h1>
+      <p>We'd love to hear from you. Send us a message and we'll respond within 24 hours.</p>
+    </section>
+
+    <section class="contact-content">
+      <div class="contact-grid">
+        <div class="contact-form-container">
+          <h2>Send Us a Message</h2>
+          <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="product">Product Inquiry</option>
+                <option value="order">Order Status</option>
+                <option value="support">Technical Support</option>
+                <option value="returns">Returns & Refunds</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Send Message ✉️</button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h2>Contact Information</h2>
+          
+          <div class="contact-card">
+            <span class="contact-icon">📧</span>
+            <div class="contact-detail">
+              <h3>Email</h3>
+              <p>awwalmicrosoft@yahoo.com</p>
+              <!-- <p>sales@techgear.com</p> -->
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <span class="contact-icon">📞</span>
+            <div class="contact-detail">
+              <h3>Phone</h3>
+              <p>+234 707 070 4322</p>
+              <p>+1 912 6800579</p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <span class="contact-icon">📍</span>
+            <div class="contact-detail">
+              <h3>Address</h3>
+              <p>20, Pike Street</p>
+              <p>Lagos, Nigeria</p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <span class="contact-icon">🕐</span>
+            <div class="contact-detail">
+              <h3>Business Hours</h3>
+              <p>Monday - Friday: 9AM - 6PM</p>
+              <p>Saturday: 10AM - 4PM</p>
+              <p>Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Success Modal -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>✅ Message Sent!</h2>
+        <button class="modal-close" onclick="closeSuccessModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Thank you for contacting us! We'll get back to you within 24 hours.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-checkout" onclick="closeSuccessModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4>TechGear</h4>
+          <p>Your premium destination for cutting-edge technology products.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="products.html">Product</a>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>📧 awwalowo2007@gmail.com</p>
+          <p>📞 +234 707 070 4322</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TechGear. All rights reserved.</p>
+        <p>Designed by SPYCROSOFT</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechGear - Product Gallery</title>
+  <title>TechGear - Premium Tech Product Gallery | SPYCROSOFT</title>
+  <meta name="description" content="TechGear - Your premium destination for cutting-edge technology products. Browse audio, wearables, and smart home devices.">
+  <meta name="author" content="SPYCROSOFT">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo">TechGear</a>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⚡</span> TechGear
+      </a>
+      <button class="hamburger-menu" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
       <ul class="nav-links">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
         <span class="toggle-icon">🌙</span>
@@ -25,254 +31,318 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="landing-hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
     <div class="hero-content">
-      <h1>Premium Tech Collection</h1>
-      <p>Discover our handpicked selection of cutting-edge technology products</p>
+      <span class="hero-badge pulse">🔥 New 2026 Collection</span>
+      <h1>Elevate Your <span class="gradient-text">Tech Lifestyle</span></h1>
+      <p>Discover premium audio gear, smart wearables, and intelligent home devices curated for the modern you.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">10K+</span>
+          <span class="stat-label">Happy Customers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Products</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Support</span>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="products.html" class="btn-primary">
+          🛒 Explore Products
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="about.html" class="btn-secondary">
+          ℹ️ About Us
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-float-container">
+        <span class="hero-emoji main-emoji">🚀</span>
+        <span class="floating-icon icon-1">🎧</span>
+        <span class="floating-icon icon-2">⌚</span>
+        <span class="floating-icon icon-3">💡</span>
+        <span class="floating-icon icon-4">🔊</span>
+      </div>
     </div>
   </section>
 
-  <!-- Filter Section -->
-  <section class="filters">
-    <div class="filter-container">
-      <button class="filter-btn active" data-filter="all">All Products</button>
-      <button class="filter-btn" data-filter="audio">Audio</button>
-      <button class="filter-btn" data-filter="wearable">Wearables</button>
-      <button class="filter-btn" data-filter="smart-home">Smart Home</button>
+  <!-- Features Section -->
+  <section class="features">
+    <div class="section-header">
+      <span class="section-tag">Why Us</span>
+      <h2>Why Choose TechGear?</h2>
+      <p>We deliver excellence in every product and service</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon-wrapper">
+          <span class="feature-icon">🚚</span>
+        </div>
+        <h3>Free Shipping</h3>
+        <p>Free shipping on all orders over $50. Fast and reliable delivery worldwide.</p>
+        <a href="#" class="feature-link">Learn more →</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrapper">
+          <span class="feature-icon">🛡️</span>
+        </div>
+        <h3>2-Year Warranty</h3>
+        <p>All products come with a comprehensive 2-year warranty for peace of mind.</p>
+        <a href="#" class="feature-link">Learn more →</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrapper">
+          <span class="feature-icon">💬</span>
+        </div>
+        <h3>24/7 Support</h3>
+        <p>Our dedicated support team is available around the clock to help you.</p>
+        <a href="#" class="feature-link">Learn more →</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrapper">
+          <span class="feature-icon">🔄</span>
+        </div>
+        <h3>30-Day Returns</h3>
+        <p>Not satisfied? Return any product within 30 days for a full refund.</p>
+        <a href="#" class="feature-link">Learn more →</a>
+      </div>
     </div>
   </section>
 
-  <!-- Product Gallery -->
-  <main class="product-gallery">
-    <div class="gallery-container" id="galleryContainer">
-      <!-- Product Card 1 - Wireless Headphones -->
-      <div class="product-card" data-category="audio">
+  
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="section-header">
+          <span class="section-tag">Categories</span>
+          <h2>Shop by Category</h2>
+          <p>Find exactly what you need</p>
+        </div>
+        <div class="categories-grid">
+          <a href="products.html" class="category-card audio-cat">
+            <span class="category-icon">🎧</span>
+            <h3>Audio</h3>
+            <p>Headphones & Speakers</p>
+          </a>
+          <a href="products.html" class="category-card wearable-cat">
+            <span class="category-icon">⌚</span>
+            <h3>Wearables</h3>
+            <p>Smart Watches & Bands</p>
+          </a>
+          <a href="products.html" class="category-card home-cat">
+            <span class="category-icon">🏠</span>
+            <h3>Smart Home</h3>
+            <p>Home Automation</p>
+          </a>
+        </div>
+      </section>
+
+  <!-- Featured Products -->
+  <section class="featured-products">
+    <div class="section-header">
+      <span class="section-tag">Featured</span>
+      <h2>Featured Products</h2>
+      <p>Our most popular picks</p>
+    </div>
+    <div class="featured-grid">
+      <div class="product-card enhanced">
         <div class="product-image">
           <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&fit=crop&crop=center" 
                alt="Wireless Headphones" 
                class="product-img"
-               loading="lazy"
-               onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ddd%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3E🎧%3C/text%3E%3C/svg%3E'">
-          <span class="product-badge">New</span>
+               loading="lazy">
+          <span class="product-badge">Best Seller</span>
+          <div class="product-overlay">
+            <a href="products.html" class="overlay-btn">Quick View</a>
+          </div>
         </div>
         <div class="product-details">
           <span class="product-category">Audio</span>
-          <h3 class="product-title">Pro Wireless Headphones</h3>
-          <p class="product-description">Immersive sound with active noise cancellation and 30-hour battery life</p>
+          <h3>Pro Wireless Headphones</h3>
           <div class="product-rating">
             <span class="stars">★★★★★</span>
-            <span class="rating-count">(128 reviews)</span>
+            <span>(128)</span>
           </div>
+          <p>Immersive sound with ANC</p>
           <div class="product-price-row">
             <span class="product-price">$249.99</span>
             <span class="product-original-price">$299.99</span>
           </div>
-          <div class="product-actions">
-            <button class="btn-add-cart" onclick="addToCart('Pro Wireless Headphones', 249.99)">
-              <span class="btn-icon">🛒</span> Add to Cart
-            </button>
-            <button class="btn-wishlist" onclick="toggleWishlist(this)" aria-label="Add to wishlist">
-              ♡
-            </button>
-          </div>
+          <a href="products.html" class="btn-add-cart">View Details →</a>
         </div>
       </div>
 
-     <!-- Product Card 2 - Smart Watch -->
-<div class="product-card" data-category="wearable">
-    <div class="product-image">
-      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop&crop=center" 
-           alt="Smart Watch with health tracking features" 
-           class="product-img"
-           loading="lazy"
-           onerror="this.src='https://images.unsplash.com/photo-1546868871-af0de0ae72be?w=600&h=400&fit=crop&crop=center'">
-      <span class="product-badge sale">Sale</span>
-    </div>
-    <div class="product-details">
-      <span class="product-category">Wearable</span>
-      <h3 class="product-title">Smart Watch Pro</h3>
-      <p class="product-description">Advanced health tracking with GPS, heart rate monitor, and sleep analysis</p>
-      <div class="product-rating">
-        <span class="stars">★★★★☆</span>
-        <span class="rating-count">(95 reviews)</span>
-      </div>
-      <div class="product-price-row">
-        <span class="product-price">$199.99</span>
-        <span class="product-original-price">$349.99</span>
-      </div>
-      <div class="product-actions">
-        <button class="btn-add-cart" onclick="addToCart('Smart Watch Pro', 199.99)">
-          <span class="btn-icon">🛒</span> Add to Cart
-        </button>
-        <button class="btn-wishlist" onclick="toggleWishlist(this)" aria-label="Add to wishlist">
-          ♡
-        </button>
-      </div>
-    </div>
-  </div>
-
-      <!-- Product Card 3 - Bluetooth Speaker -->
-      <div class="product-card" data-category="audio">
+      <div class="product-card enhanced">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&h=400&fit=crop&crop=center" 
-               alt="Bluetooth Speaker" 
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop&crop=center" 
+               alt="Smart Watch" 
                class="product-img"
-               loading="lazy"
-               onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ddd%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3E🔊%3C/text%3E%3C/svg%3E'">
+               loading="lazy">
+          <span class="product-badge sale">-43% OFF</span>
+          <div class="product-overlay">
+            <a href="products.html" class="overlay-btn">Quick View</a>
+          </div>
         </div>
         <div class="product-details">
-          <span class="product-category">Audio</span>
-          <h3 class="product-title">Portable Bluetooth Speaker</h3>
-          <p class="product-description">360° surround sound, waterproof design, and 20-hour playtime</p>
+          <span class="product-category">Wearable</span>
+          <h3>Smart Watch Pro</h3>
           <div class="product-rating">
-            <span class="stars">★★★★★</span>
-            <span class="rating-count">(203 reviews)</span>
+            <span class="stars">★★★★☆</span>
+            <span>(95)</span>
           </div>
+          <p>Advanced health tracking</p>
           <div class="product-price-row">
-            <span class="product-price">$129.99</span>
+            <span class="product-price">$199.99</span>
+            <span class="product-original-price">$349.99</span>
           </div>
-          <div class="product-actions">
-            <button class="btn-add-cart" onclick="addToCart('Portable Bluetooth Speaker', 129.99)">
-              <span class="btn-icon">🛒</span> Add to Cart
-            </button>
-            <button class="btn-wishlist" onclick="toggleWishlist(this)" aria-label="Add to wishlist">
-              ♡
-            </button>
-          </div>
+          <a href="products.html" class="btn-add-cart">View Details →</a>
         </div>
       </div>
 
-     <!-- Product Card 4 - Fitness Tracker -->
-<div class="product-card" data-category="wearable">
-    <div class="product-image">
-      <img src="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&h=400&fit=crop&crop=center" 
-           alt="Fitness Tracker Band with step counting display" 
-           class="product-img"
-           loading="lazy"
-           onerror="this.src='https://images.unsplash.com/photo-1557438159-51eec7a6c9e8?w=600&h=400&fit=crop&crop=center'">
-      <span class="product-badge">Hot</span>
-    </div>
-    <div class="product-details">
-      <span class="product-category">Wearable</span>
-      <h3 class="product-title">Fitness Tracker Band</h3>
-      <p class="product-description">Lightweight design with step counting, calories, and notifications</p>
-      <div class="product-rating">
-        <span class="stars">★★★★☆</span>
-        <span class="rating-count">(156 reviews)</span>
-      </div>
-      <div class="product-price-row">
-        <span class="product-price">$79.99</span>
-      </div>
-      <div class="product-actions">
-        <button class="btn-add-cart" onclick="addToCart('Fitness Tracker Band', 79.99)">
-          <span class="btn-icon">🛒</span> Add to Cart
-        </button>
-        <button class="btn-wishlist" onclick="toggleWishlist(this)" aria-label="Add to wishlist">
-          ♡
-        </button>
-      </div>
-    </div>
-  </div>
-
-   <!-- Product Card 5 - Smart LED Light Bulbs -->
-<div class="product-card" data-category="smart-home">
-    <div class="product-image">
-      <img src="https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
-           alt="Smart LED Light Bulbs with WiFi and RGB colors" 
-           class="product-img"
-           loading="lazy"
-           onerror="this.src='https://images.unsplash.com/photo-1565814636199-ae8133055c1c?w=600&h=400&fit=crop&crop=center'">
-    </div>
-    <div class="product-details">
-      <span class="product-category">Smart Home</span>
-      <h3 class="product-title">Smart LED Light Bulbs</h3>
-      <p class="product-description">WiFi-enabled RGB bulbs with voice control and scheduling</p>
-      <div class="product-rating">
-        <span class="stars">★★★★★</span>
-        <span class="rating-count">(312 reviews)</span>
-      </div>
-      <div class="product-price-row">
-        <span class="product-price">$49.99</span>
-        <span class="product-original-price">$69.99</span>
-      </div>
-      <div class="product-actions">
-        <button class="btn-add-cart" onclick="addToCart('Smart LED Light Bulbs', 49.99)">
-          <span class="btn-icon">🛒</span> Add to Cart
-        </button>
-        <button class="btn-wishlist" onclick="toggleWishlist(this)" aria-label="Add to wishlist">
-          ♡
-        </button>
-      </div>
-    </div>
-  </div>
-
-
-      <!-- Product Card 6 - Smart Home Hub -->
-      <div class="product-card" data-category="smart-home">
+      <div class="product-card enhanced">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=600&h=400&fit=crop&crop=center" 
-               alt="Smart Home Hub" 
+          <img src="https://images.unsplash.com/photo-1565814636199-ae8133055c1c?w=600&h=400&fit=crop&crop=center" 
+               alt="Smart LED Bulbs" 
                class="product-img"
-               loading="lazy"
-               onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ddd%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3E🏠%3C/text%3E%3C/svg%3E'">
-          <span class="product-badge sale">-20%</span>
+               loading="lazy">
+          <span class="product-badge new">New</span>
+          <div class="product-overlay">
+            <a href="products.html" class="overlay-btn">Quick View</a>
+          </div>
         </div>
         <div class="product-details">
           <span class="product-category">Smart Home</span>
-          <h3 class="product-title">Smart Home Hub</h3>
-          <p class="product-description">Central control for all your smart devices with voice assistant</p>
+          <h3>Smart LED Light Bulbs</h3>
           <div class="product-rating">
-            <span class="stars">★★★★☆</span>
-            <span class="rating-count">(89 reviews)</span>
+            <span class="stars">★★★★★</span>
+            <span>(312)</span>
           </div>
+          <p>WiFi-enabled RGB bulbs</p>
           <div class="product-price-row">
-            <span class="product-price">$159.99</span>
-            <span class="product-original-price">$199.99</span>
+            <span class="product-price">$49.99</span>
           </div>
-          <div class="product-actions">
-            <button class="btn-add-cart" onclick="addToCart('Smart Home Hub', 159.99)">
-              <span class="btn-icon">🛒</span> Add to Cart
-            </button>
-            <button class="btn-wishlist" onclick="toggleWishlist(this)" aria-label="Add to wishlist">
-              ♡
-            </button>
+          <a href="products.html" class="btn-add-cart">View Details →</a>
+        </div>
+      </div>
+    </div>
+    <div class="view-all">
+      <a href="products.html" class="btn-outline">
+        View All Products →
+      </a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="section-header">
+      <span class="section-tag">Testimonials</span>
+      <h2>What Our Customers Say</h2>
+      <p>Real reviews from real people</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"Amazing products and fast delivery. The headphones are incredible! Best purchase I've made this year."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">👨</div>
+          <div class="author-info">
+            <h4>John D.</h4>
+            <span>Verified Buyer</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"Best tech store online. Customer service is outstanding. Will definitely shop here again!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">👩</div>
+          <div class="author-info">
+            <h4>Sarah M.</h4>
+            <span>Verified Buyer</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-stars">★★★★☆</div>
+        <p>"Great quality products at competitive prices. Highly recommend the smart home collection!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">👨‍💼</div>
+          <div class="author-info">
+            <h4>Mike R.</h4>
+            <span>Verified Buyer</span>
           </div>
         </div>
       </div>
     </div>
-  </main>
+  </section>
 
-  <!-- Shopping Cart Modal -->
-  <div id="cartModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>Shopping Cart</h2>
-        <button class="modal-close" onclick="toggleCart()">&times;</button>
-      </div>
-      <div class="modal-body" id="cartItems">
-        <p class="empty-cart">Your cart is empty</p>
-      </div>
-      <div class="modal-footer">
-        <div class="cart-total">
-          <span>Total:</span>
-          <span id="cartTotal">$0.00</span>
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="newsletter-content">
+      <span class="newsletter-icon">📬</span>
+      <h2>Stay Updated</h2>
+      <p>Subscribe to get special offers, free giveaways, and new product updates.</p>
+      <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+        <div class="input-group">
+          <span class="input-icon">📧</span>
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit" class="btn-subscribe">Subscribe Now</button>
         </div>
-        <button class="btn-checkout" onclick="checkout()">Checkout</button>
-      </div>
+      </form>
+      <p class="newsletter-note">No spam, unsubscribe anytime.</p>
     </div>
-  </div>
-
-  <!-- Cart Icon -->
-  <button class="cart-float" onclick="toggleCart()" aria-label="View cart">
-    🛒
-    <span class="cart-count" id="cartCount">0</span>
-  </button>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+      </svg>
+    </div>
     <div class="footer-content">
-      <p>&copy; 2026 TechGear. All rights reserved.</p>
-      <p>Developed by SPYCROSOFT</p>
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4>⚡ TechGear</h4>
+          <p>Your premium destination for cutting-edge technology products since 2020.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">📘</a>
+            <a href="#" class="social-link">🐦</a>
+            <a href="#" class="social-link">📷</a>
+            <a href="#" class="social-link">💼</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="index.html">🏠 Home</a>
+          <a href="products.html">🛒 Products</a>
+          <a href="about.html">ℹ️ About</a>
+          <a href="contact.html">📞 Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p>📧 awwalmicrosoft@yahoo.com</p>
+          <p>📞 +234 707 070 4322</p>
+          <p>📞 +234 912 680 0579</p>
+          <p>📍 Lagos, Nigeria</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TechGear. All rights reserved.</p>
+        <p>Designed with ❤️ by <strong>SPYCROSOFT</strong></p>
+      </div>
     </div>
   </footer>
 

@@ -187,3 +187,71 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
+
+
+// Mobile Menu Toggle
+function toggleMobileMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    if (window.innerWidth <= 768) {
+      navLinks.classList.remove('active');
+    }
+  });
+});
+
+// Handle Contact Form Submission
+function handleContactSubmit(event) {
+  event.preventDefault();
+  
+  // Get form data
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+  
+  // Show success modal
+  const modal = document.getElementById('successModal');
+  modal.classList.add('show');
+  
+  // Reset form
+  document.getElementById('contactForm').reset();
+  
+  // Log submission (in real app, send to server)
+  console.log('Contact Form Submitted:', { name, email, subject, message });
+  
+  return false;
+}
+
+// Close Success Modal
+function closeSuccessModal() {
+  const modal = document.getElementById('successModal');
+  modal.classList.remove('show');
+}
+
+// Close modals when clicking outside
+window.addEventListener('click', (event) => {
+  const successModal = document.getElementById('successModal');
+  const cartModal = document.getElementById('cartModal');
+  
+  if (event.target === successModal) {
+    closeSuccessModal();
+  }
+  if (event.target === cartModal) {
+    toggleCart();
+  }
+});
+
+// Newsletter Submission
+function handleNewsletter(event) {
+  event.preventDefault();
+  const email = event.target.querySelector('input').value;
+  showNotification('Thank you for subscribing! 🎉');
+  event.target.reset();
+  return false;
+}

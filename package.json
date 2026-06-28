@@ -1,0 +1,15 @@
+{
+  "name": "techgear-gallery",
+  "version": "1.0.0",
+  "description": "TechGear - Premium Tech Product Gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": ["techgear", "gallery", "ecommerce"],
+  "author": "SPYCROSOFT",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
